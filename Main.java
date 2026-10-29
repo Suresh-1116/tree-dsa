@@ -14,7 +14,19 @@ public class Main {
         Node n3 = new Node(3, n6, n7);
         Node n2 = new Node(2, n4, n5);
 
-        Node root = new Node(1, n2, n3);
+        Node root1 = new Node(1, n2, n3);
+
+
+        Node nr7 = new Node(7, null, null);
+        Node nr6 = new Node(6, null, null);
+        Node nr5 = new  Node(5, null, null);
+        Node nr4 = new Node(4, null, null);
+
+        Node nr3 = new Node(3, nr6, nr7);
+        Node nr2 = new Node(2, nr4, nr5);
+
+        Node root2 = new Node(1, nr2, nr3);
+
 
         //usingRecursion(result, root);
         //PreOrderTraversal.usingIterative(result, root);
@@ -31,7 +43,17 @@ public class Main {
         //     System.out.println(num + " ");
         // }
 
-        System.out.print(TreeProblems.balancedTree(root) != -1);
+        //System.out.print(TreeProblems.balancedTree(root) != -1);
+
+        int[] maxi = new int[1];
+
+        maxi[0] = Integer.MIN_VALUE;
+
+        //TreeProblems.diameterOfTree(root, maxi);
+
+        //TreeProblems.maxPathSum(root, maxi);
+
+        System.out.println(TreeProblems.indenticalOrNot(root1, root2));
         
     }
 }
