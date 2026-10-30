@@ -16,16 +16,14 @@ public class Main {
 
         Node root1 = new Node(1, n2, n3);
 
-        root1 = null;
 
+        Node nr7 = new Node(4, null, null);
+        Node nr6 = new Node(5, null, null);
+        Node nr5 = new  Node(6, null, null);
+        Node nr4 = new Node(7, null, null);
 
-        Node nr7 = new Node(7, null, null);
-        Node nr6 = new Node(6, null, null);
-        Node nr5 = new  Node(5, null, null);
-        Node nr4 = new Node(4, null, null);
-
-        Node nr3 = new Node(3, nr6, nr7);
-        Node nr2 = new Node(2, nr4, nr5);
+        Node nr3 = new Node(2, nr6, nr7);
+        Node nr2 = new Node(3, nr4, nr5);
 
         Node root2 = new Node(1, nr2, nr3);
 
@@ -47,9 +45,9 @@ public class Main {
 
         //System.out.print(TreeProblems.balancedTree(root) != -1);
 
-        int[] maxi = new int[1];
+        //int[] maxi = new int[1];
 
-        maxi[0] = Integer.MIN_VALUE;
+        //maxi[0] = Integer.MIN_VALUE;
 
         //TreeProblems.diameterOfTree(root, maxi);
 
@@ -61,23 +59,50 @@ public class Main {
         //     System.out.println(subList);
         // }
 
-        List<Integer> result = new ArrayList<>();
+        // List<Integer> result = new ArrayList<>();
 
 
-        if(root1 != null && !TreeProblems.isLeaf(root1)){
-            result.add(root1.data);
-        }
+        // if(root1 != null && !TreeProblems.isLeaf(root1)){
+        //     result.add(root1.data);
+        // }
 
 
-        if(root1 != null){
-            TreeProblems.leftBoundaryNodes(root1, result);
-            TreeProblems.leafNodes(root1, result);
-            TreeProblems.rightBoundaryNodes(root1, result);
-        }
+        // if(root1 != null){
+        //     TreeProblems.leftBoundaryNodes(root1, result);
+        //     TreeProblems.leafNodes(root1, result);
+        //     TreeProblems.rightBoundaryNodes(root1, result);
+        // }
 
-        System.out.println(result);
-        
+        // System.out.println(result);
 
+
+
+        // List<List<Integer>> res = TreeProblems.verticalTraversal(root1);
+
+        // for(List<Integer> r: res){
+        //     System.out.println(r);
+        // }
+
+
+        // List<Integer> result = TreeProblems.topView(root1);
+
+        // System.out.println(result);
+
+
+        // List<Integer> result = TreeProblems.bottomView(root1);
+        // System.out.println(result);
+
+        // List<Integer> result = new ArrayList<>();
+        // TreeProblems.rightView(root1, 0, result);
+        // System.out.println(result);
+
+        //System.out.println(TreeProblems.isSymmetrical(root1, root2));
+
+        // List<Integer> result = new ArrayList<>();
+        // TreeProblems.rootToNodePath(root1, 5, result);
+        // System.out.println(result);
+
+        //System.out.println((TreeProblems.commonAncestor(root1, n4, n5)).data);
         //System.out.println(TreeProblems.indenticalOrNot(root1, root2));
         
     }
