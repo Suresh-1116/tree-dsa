@@ -103,6 +103,7 @@ public class Main {
         // System.out.println(result);
 
         //System.out.println((TreeProblems.commonAncestor(root1, n4, n5)).data);
+        System.out.println(TreeProblems.maximumWidth(root1));
         //System.out.println(TreeProblems.indenticalOrNot(root1, root2));
         
     }

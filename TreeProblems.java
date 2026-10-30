@@ -381,5 +381,34 @@ public class TreeProblems {
 
 
 
-    //PROBLEM 14: 
+    //PROBLEM 14: MAXIMU WIDTH OF THE BINARY TREE
+    public static int maximumWidth(Node node){
+        if(node == null){
+            return 0;
+        }
+        Queue<Pair> queue = new LinkedList<>();
+        queue.offer(new Pair(node, 0));
+        int ans = 0;
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            int start = queue.peek().xaxis;
+            int first = 0;
+            int last = 0;
+            for(int i = 0; i < size; i++){
+                Pair pair = queue.poll();
+                Node cur = pair.node;
+                int num = pair.xaxis - start;
+                if(i == 0) first = num;
+                if(i == size - 1) last = num;
+                if(cur.left != null){
+                    queue.offer(new Pair(cur.left, 2*num + 1));
+                }
+                if(cur.right != null){
+                    queue.offer(new Pair(cur.right, 2 * num + 2));
+                }
+            }
+            ans = Math.max(ans, last-first+1);
+        }
+        return ans;
+    }
 }
